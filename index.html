@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosethorn Sanctum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Crimson+Text&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Rosethorn Sanctum</h1>
+  <h2>An enchanted grove where secrets grow</h2>
+
+  <div class="buttons">
+    <a href="javascript:void(0)" id="rulesBtn" class="btn">Rules</a>
+    <a href="map.html" class="btn">Map</a>
+    <a href="https://discord.gg/3ZscmUsArT" target="_blank" class="btn">Discord</a>
+  </div>
+
+  <!-- 🕯️ The Scroll Modal -->
+  <div id="rulesModal" class="scroll-modal">
+    <div class="scroll-content">
+      <span class="close-scroll">&times;</span>
+      <h2>Rosethorn Rules</h2>
+
+      <h3>🏰 Minecraft Realm</h3>
+      <ul>
+        <li><strong>Respect Others</strong> — No griefing, stealing, or harassment.</li>
+        <li><strong>Build Responsibly</strong> — Avoid lag machines or disruptive structures.</li>
+        <li><strong>No Cheating</strong> — Mods or clients must be pre-approved.</li>
+        <li><strong>Protect Nature</strong> — Replant trees, avoid large-scale destruction.</li>
+        <li><strong>Report Issues</strong> — Reach out to staff if problems arise.</li>
+      </ul>
+
+      <h3>🕸️ Discord Server</h3>
+      <ul>
+        <li><strong>Respect Everyone</strong> — Zero tolerance for hate speech or drama.</li>
+        <li><strong>Stay Organized</strong> — Use correct channels for each topic.</li>
+        <li><strong>No Spam</strong> — Avoid flooding messages, tags, or commands.</li>
+        <li><strong>Keep Things Private</strong> — Don’t share DMs or sensitive info.</li>
+        <li><strong>Follow Staff Guidance</strong> — Listen to moderators; they maintain peace.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Logo between buttons and footer -->
+  <img src="images/logo.png" alt="Rosewood Paradise Logo" class="page-logo" />
+
+  <footer>
+    <div class="candle">🕯️</div>
+    <div class="footer-text">From spawn to stronghold, all paths lead here • Rosethorn Sanctum</div>
+  </footer>
+
+  <script>
+    // 🎭 Toggle modal visibility
+    const btn = document.getElementById('rulesBtn');
+    const modal = document.getElementById('rulesModal');
+    const closeBtn = document.querySelector('.close-scroll');
+
+    btn.onclick = () => modal.style.display = 'block';
+    closeBtn.onclick = () => modal.style.display = 'none';
+    window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+  </script>
+</body>
+</html>
